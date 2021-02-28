@@ -3,7 +3,6 @@ const { defaultCompileProps } = require("@component-controls/core");
 const { getBundleName } = require("@component-controls/core/node-utils");
 
 const { compile, watch } = require("@component-controls/webpack-compile");
-const { StorePlugin } = require("@component-controls/store/plugin");
 
 const { resolve } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -45,6 +44,15 @@ const config = {
         use: "babel-loader",
         exclude: /node_modules/,
       },
+      {
+        test: require.resolve("@component-controls/store/controls-store"),
+        use: {
+          loader: require.resolve("@component-controls/store/loader.js"),
+          options: {
+            bundleFileName: getBundleName(buildOptions),
+          },
+        },
+      },
     ],
   },
   plugins: [
@@ -52,14 +60,7 @@ const config = {
       title: "Babel + TypeScript + React = ❤️",
       template: "./src/index.html",
     }),
-    new StorePlugin({
-      bundleFileName: getBundleName(buildOptions),
-    }),
   ],
-  performance: {
-    maxEntrypointSize: 8000000,
-    maxAssetSize: 8000000,
-  },
 };
 
 if (isProd) {
