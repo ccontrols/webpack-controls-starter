@@ -1,9 +1,7 @@
 const path = require("path");
-const { ProvidePlugin } = require("webpack");
-const {
-  getBundleName,
-  defaultCompileProps,
-} = require("@component-controls/core");
+const { defaultCompileProps } = require("@component-controls/core");
+const { getBundleName } = require("@component-controls/core/node-utils");
+
 const { compile, watch } = require("@component-controls/webpack-compile");
 const { StorePlugin } = require("@component-controls/store/plugin");
 
