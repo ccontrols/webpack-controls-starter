@@ -9,7 +9,7 @@ const isProd = process.env.NODE_ENV === "production";
 
 const outFolder = process.env.BUILD_PATH || "build";
 
-const distFoloder = resolve(__dirname, outFolder);
+const distFolder = resolve(__dirname, outFolder);
 const config = {
   mode: isProd ? "production" : "development",
   entry: {
@@ -47,7 +47,7 @@ if (isProd) {
 } else {
   // for more information, see https://webpack.js.org/configuration/dev-server
   config.devServer = {
-    contentBase: distFoloder,
+    contentBase: distFolder,
     port: 8080,
     open: true,
     hot: true,
