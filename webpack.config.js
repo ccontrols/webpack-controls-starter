@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 const {
   withComponentControls,
-} = require("@component-controls/react-router-integration/post-build");
+} = require("@component-controls/react-router-integration/webpack-build");
 
 const isProd = process.env.NODE_ENV === "production";
 
