@@ -13,7 +13,7 @@
 1. clone
 
 ```
-  git clone git@github.com:update repo/webpack-controls-starter.git
+  git clone git@github.com:ccontrols/webpack-controls-starter.git
 ```
 
 2. move to project folder :)
