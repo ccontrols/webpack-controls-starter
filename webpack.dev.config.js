@@ -1,34 +1,34 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {
   withComponentControls,
-} = require('@component-controls/react-router-integration/webpack-build');
+} = require("@component-controls/react-router-integration/webpack-build");
 
-const publicFolder = process.env.PUBLIC_PATH || 'public';
+const publicFolder = process.env.PUBLIC_PATH || "public";
 const publicPath = path.join(__dirname, publicFolder);
-const distFolder = process.env.BUILD_PATH || 'build';
+const distFolder = process.env.BUILD_PATH || "build";
 const distPath = path.join(__dirname, distFolder);
 
 const config = {
-  mode: 'development',
+  mode: "development",
   output: {
     path: distPath,
-    publicPath: '/',
+    publicPath: "/",
   },
-  entry: './src/index.tsx',
+  entry: "./src/index.tsx",
   module: {
     rules: [
       {
         test: /\.(ts|js)x?$/i,
         include: /src/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
             presets: [
-              '@babel/preset-env',
-              '@babel/preset-react',
-              '@babel/preset-typescript',
+              "@babel/preset-env",
+              "@babel/preset-react",
+              "@babel/preset-typescript",
             ],
           },
         },
@@ -36,15 +36,15 @@ const config = {
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: "src/index.html",
     }),
     new webpack.HotModuleReplacementPlugin(),
   ],
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   devServer: {
     contentBase: publicPath,
     historyApiFallback: true,
@@ -56,6 +56,5 @@ const config = {
 
 module.exports = withComponentControls({
   config,
-  development: true,
-  options: { configPath: '.config', distFolder: publicPath },
+  options: { configPath: ".config", distFolder: publicPath },
 });
