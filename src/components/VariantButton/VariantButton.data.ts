@@ -1,24 +1,24 @@
 export default {
   overview: {
     "0": {
-      text: "Edwin Kutch",
-      icon: "Floy Hermann"
+      text: "Cristian Conroy",
+      icon: "Tito Davis"
     },
     "1": {
-      text: "Autumn Bernhard",
-      icon: "Krystel McDermott III"
+      text: "Salvatore Goldner",
+      icon: "Esther Turner"
     },
     "2": {
-      text: "Aliya Kemmer",
-      icon: "Elva Hane"
+      text: "Mrs. Floyd Kub",
+      icon: "Charlie Lebsack"
     },
     "3": {
-      text: "London Hudson",
-      icon: "Heaven Zulauf"
+      text: "Dejon Doyle",
+      icon: "Demetrius Lemke"
     },
     "4": {
-      text: "Leonard Bode",
-      icon: "Elisa Altenwerth"
+      text: "Dasia Witting",
+      icon: "Micaela Reinger"
     }
   }
 };
