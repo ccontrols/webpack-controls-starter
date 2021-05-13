@@ -1,24 +1,27 @@
 export default {
   overview: {
-    "0": {
-      text: "Cristian Conroy",
-      icon: "Tito Davis"
-    },
     "1": {
-      text: "Salvatore Goldner",
-      icon: "Esther Turner"
+      text: "Cecelia Langosh",
+      variant: "success",
+      icon: "none"
     },
     "2": {
-      text: "Mrs. Floyd Kub",
-      icon: "Charlie Lebsack"
+      text: "Jolie Beahan Sr.",
+      variant: "disabled",
+      icon: "down-arrow"
     },
     "3": {
-      text: "Dejon Doyle",
-      icon: "Demetrius Lemke"
+      text: "Kane Ortiz",
+      variant: "warning"
     },
     "4": {
-      text: "Dasia Witting",
-      icon: "Micaela Reinger"
+      text: "Ronny Spinka",
+      variant: "success",
+      icon: "right-arrow"
+    },
+    "5": {
+      text: "Jayce Schaden",
+      icon: "up-arrow"
     }
   }
 };
